@@ -1,0 +1,30 @@
+.beautyslider .traveller {
+    background: 0 0 url(slider-traveller.png) no-repeat;
+    width: 14px;
+    height: 33px;
+    position: absolute;
+}
+
+.beautyslider:hover .traveller,
+.beautyslider.active .traveller {
+    background-image: url(slider-traveller-active.png);
+}
+
+.beautyslider:hover,
+.beautyslider.active {
+    cursor: pointer;
+}
+
+.beautyslider {
+    background: 0 center url(slider-background.png) repeat-x;
+    width: 300px;
+    height: 33px;
+    position: relative;
+    margin: 10px 0;
+}
+
+#mario {
+    background: repeat-x;
+    width: 300px;
+    height: 200px;
+}

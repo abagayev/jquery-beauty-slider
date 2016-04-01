@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <title>Beauty Slider v0.9 - just another jQuery plugin</title>
+
+    <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="plugin/jquery.slider.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="demo/style.css">
+
+    <script type="text/javascript">
+
+        $(function () {
+
+            $('#changer').beautyslider({
+                currentSlide: 1,
+                slidesTotal: 2,
+                onChange: function () {
+                    $('#mario').css({
+                        'background-image': 'url(demo/' + $(this).getCurrentSlide() + '.jpeg'
+                    })
+                }
+            });
+
+            $('#slider').beautyslider({
+                currentSlide: 2,
+                slidesTotal: 7,
+                onChange: function () {
+                    $('#mario').css({
+                        'background-position': 300 * (1 - $(this).getCurrentSlide()) + 'px 0'
+                    })
+                }
+            });
+
+        });
+
+    </script>
+
+</head>
+
+<body>
+
+    <h1>Beauty Slider v0.9 - just another jQuery plugin</h1>
+
+    <p>Choose you image:</p>
+    <div id="changer" title="Drag the slider!" style="width: 50px;"></div>
+
+    <p>Rotate your hero:</p>
+    <div id="mario"></div>
+    <div id="slider" title="Drag the slider!"></div>
+
+</body>
+</html>
